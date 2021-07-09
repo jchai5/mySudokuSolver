@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 grid = []
-def input():
+def user_input():
     """
     Get the user-input of the sudoku puzzle, row by row. Enter 0 for empty space.
     :return: None
@@ -148,7 +148,7 @@ def solve_sudoku():
 
 
 if __name__ == "__main__":
-    input() # manual input sudoku puzzle
+    user_input() # manual input sudoku puzzle
     print(solve_sudoku()) # returns true if there is solution
     browser_input(grid) # inputs the answer into the browser
 
