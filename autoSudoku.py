@@ -3,6 +3,7 @@ import numpy as np
 import time
 
 grid = []
+
 def user_input():
     """
     Get the user-input of the sudoku puzzle, row by row. Enter 0 for empty space.
@@ -99,14 +100,8 @@ def browser_input(puzzle):
         counter.append(num)
         if len(counter)%9 == 0:
             pg.hotkey('down')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
-            pg.hotkey('left')
+            for _ in range(8):
+                pg.hotkey('left')
 
 def solve_sudoku():
     """
@@ -146,13 +141,17 @@ def solve_sudoku():
     # puzzle is UNSOLVABLE:
     return False
 
-
-if __name__ == "__main__":
+def print_board(board):
+    length = len(board)
+    for i in range(length):
+        print(board[i])
+def main():
     user_input() # manual input sudoku puzzle
-    print(solve_sudoku()) # returns true if there is solution
+    print("Solution?", solve_sudoku())  # returns true if there is solution
+    print(print_board(grid)) # print out the board
     browser_input(grid) # inputs the answer into the browser
 
-    # print out the board
-    length = len(grid)
-    for i in range(length):
-        print(grid[i])
+
+if __name__ == "__main__":
+    main()
+

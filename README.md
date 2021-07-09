@@ -38,3 +38,7 @@ and click on the beginning of the puzzle (first square).
 
 Example sudoku website: 
 https://sudoku.com/expert/
+
+Log:
+1) (9/July) The program only works on sudoku.com for some reason. 
+After the 9th 
