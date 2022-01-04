@@ -26,12 +26,13 @@ https://pyautogui.readthedocs.io/en/latest/
 The program is similar with mySudokuSolver, except after finding the 
 solution, we use PyAutoGui to enter the answer for us on the website.
 
-HOW TO USE:
-1) Enter the sudoku puzzle, row by row.
+# HOW TO USE: 
+Open autoSudoku.py and run it.
+1) Enter the sudoku puzzle, row by row. (Empty inputs represents 0, make sure no spacing e.g. 001020050070)
 2) On the last (9th) row, make sure to have 
 the website open to prepare for the code.
 
-3) When pressed enter, switch to browser website (2 second timer before program starts)
+3) When pressed enter, switch to browser website (5 second timer before program starts)
 and click on the beginning of the puzzle (first square).
    
 4) The program should autofill the answer.
